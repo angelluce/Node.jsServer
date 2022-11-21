@@ -1,13 +1,26 @@
-const express = require('express'); //Import the express dependency
-const app = express(); //Instantiate an express app, the main work horse of this server
-const port = 5000; //Save the port number where your server will be listening
+const express = require('express');
+const app = express();
+const port = 5000;
 
-//Idiomatic expression in express to route and respond to a client request
-app.get('/', (req, res) => { //get requests to the root ("/") will route here
-    res.sendFile('index.html', { root: __dirname }); //server responds by sending the index.html file to the client's browser
-    //the .sendFile method needs the absolute path to the file, see: https://expressjs.com/en/4x/api.html#res.sendFile 
+app.get('/', function(req, res) {
+    res.send({
+        mensaje: '¡Node.js está ejecutándose!',
+        estado: true,
+    })
+})
+
+app.get('/inicio', (req, res) => {
+    res.sendFile('/pages/index.html', { root: __dirname });
 });
 
-app.listen(port, () => { //server starts listening for any attempts from a client to connect at port: {port}
-    console.log(`Now listening on port ${port}`);
+app.get('/resultados', (req, res) => {
+    res.sendFile('/pages/results.html', { root: __dirname });
+});
+
+app.get('/posiciones', (req, res) => {
+    res.sendFile('/pages/positions.html', { root: __dirname });
+});
+
+app.listen(port, () => {
+    console.log(`Node.js está ejecutándose en: localhost:${port}`);
 });

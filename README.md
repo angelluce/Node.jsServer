@@ -1,13 +1,13 @@
-![Portada](/assets/NodejsServerPortada.png "Title")
+![Portada](/assets/NodejsServerPortada.png "Portada NodejsServer")
 
-Este proyecto fue creado con Node v16.13.1 utilizando la infraestructura de aplicaciones web Express y, los estilos de Bootstrap para las GUI
+Este proyecto fue creado con Node v16.13.1 utilizando la infraestructura de aplicaciones web Express v4.18.2 y los estilos de Bootstrap v5.2.2 para las GUI.
 
 ## Instalación
 
-Instalar las dependencias del proyecto utilizando el comando `pip install`
+Instalar las dependencias del proyecto utilizando el comando `npm install`
 
 ## Ejecución
 
 Ejecutar el proyecto utilizando el comando `node index.js`
 
-Verificar la ejecución de la aplicación en `localhost:5000/`
+Verificar la ejecución del proyecto en `localhost:5000` y `localhost:5000/inicio` con interfez gráfica
